@@ -1,0 +1,13 @@
+
+
+
+
+
+To retrieve data from a database, I follow three simple steps: Query, Fetch, and Display.
+
+Query: I use the query() method to send a SELECT request to the database.
+
+Fetch: I use fetchAll(PDO::FETCH_ASSOC) to store all results in an associative array.
+ This is efficient because I can access the data by column name (like $user['nom']) instead of a number.
+
+Display: I use a foreach loop to go through the array and render each user in an HTML table.
