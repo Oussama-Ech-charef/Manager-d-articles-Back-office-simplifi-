@@ -4,7 +4,7 @@ require 'connexion.php';
 
 
 try {
-    $sql = "SELECT * FROM Utilisateur";
+    $sql = "SELECT * FROM users";
 
     $stmt = $pdo->query($sql);
 
@@ -19,16 +19,18 @@ try {
 echo "<table border='1'>
 
 <tr>
-<th>ID</th>
+<th>ID_USER</th>
 <th>Nom</th>
 <th>Email</th>
+<th>Date_birth</th>
 </tr>";
 
 foreach ($utilisateurs as $user) {
     echo "<tr>
-    <td>{$user['id']}</td>
-    <td>{$user['nom']}</td>
+    <td>{$user['id_user']}</td>
+    <td>{$user['user_name']}</td>
     <td>{$user['email']}</td>
+    <td>{$user['date_birth']}</td>
     </tr>";
 }
 
