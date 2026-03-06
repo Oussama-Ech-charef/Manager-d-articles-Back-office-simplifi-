@@ -2,7 +2,7 @@
 
 
 $host = 'localhost';
-$dbname = 'blogdb';
+$dbname = 'blog';
 $username = 'root';
 $password = '';
 

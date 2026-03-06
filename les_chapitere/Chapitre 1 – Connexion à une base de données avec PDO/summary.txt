@@ -1,0 +1,22 @@
+
+
+
+
+first we need to creat variable for the connexion to the server 
+
+$host is the name of the server ..
+
+$password is the password of the user of the server ..
+
+$dbname is the of the database we need to connect our server to it 
+
+try / catch : we use theme to handle the errors of connexion of the server 
+
+example : if the user write a wrong name of database or user or password 
+
+if the server is not working the error message 
+
+if the server is working  the message of connexion 
+
+
+
