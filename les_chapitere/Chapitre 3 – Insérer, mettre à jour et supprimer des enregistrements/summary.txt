@@ -1,0 +1,19 @@
+
+
+
+
+
+        >> the goal of this chapter is to be able to add, modify,
+        and delete data in a database safely .
+
+
+        > prepare() and execute() : this separates the SQL code from your data,
+         which is the only way to prevect SQL injection attacks.
+
+
+                -- ($pdo->prepare("INSERT INTO table (col1, col2) VALUES (:v1, :v2)");
+    >>> INSERT :  adds new rows to the table.
+                -- ($pdo->prepare("UPDATE table SET col1 = :v1 WHERE id = :id");
+    >>> UPDATE :  the data in specific rows is modified.
+                -- ($pdo->prepare("DELETE FROM table WHERE id = :id");
+    >>> DELETE :  it removes specific records.
