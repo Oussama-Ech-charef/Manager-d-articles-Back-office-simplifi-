@@ -17,3 +17,7 @@
     >>> UPDATE :  the data in specific rows is modified.
                 -- ($pdo->prepare("DELETE FROM table WHERE id = :id");
     >>> DELETE :  it removes specific records.
+
+
+
+        >rowCount() : use to check how many rows were actually affected by your action.
