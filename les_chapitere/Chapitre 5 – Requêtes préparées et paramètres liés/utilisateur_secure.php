@@ -6,8 +6,8 @@ echo "<br>";
 
 $stmt = $conn->prepare("INSERT into users (user_name, email) VALUES (:user_name, :email)");
 $stmt->execute([
-    'user_name' => 'Mohamdede',
-    'email' => 'mohadmed@gmail.com'
+    'user_name' => 'Marwan',
+    'email' => 'marwan@gmail.com'
 ]);
 
 echo "user ajouté";
@@ -27,8 +27,8 @@ require 'connexion.php';
 echo "<br>";
 
 
-$user_name = 'oussamach';
-$email = 'oussamach@gmail.com';
+$user_name = 'anas';
+$email = 'anas@gmail.com';
 $stmt = $conn->prepare("INSERT INTO users (user_name, email) VALUES (:user_name, :email)");
 $stmt->bindParam(':user_name', $user_name);
 $stmt->bindParam(':email', $email);
@@ -56,4 +56,27 @@ echo "user ajouté";
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     echo "Nom : " . $user['user_name'];
+?>
+
+<br><br>
+
+
+<?php
+require 'connexion.php';
+
+
+echo "<br>";
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE id_user = ?");
+$stmt->execute([1]);
+
+
+
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+echo "Nom : " . $user['user_name'];
+echo "<br>";
+echo "Email : " . $user['email'];
+
 ?>
